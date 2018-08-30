@@ -1,6 +1,7 @@
 package com.ecommerce.microcommerce.model;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Entity;
@@ -9,7 +10,6 @@ import javax.persistence.Id;
 import javax.validation.constraints.Min;
 
 @Entity
-//@JsonFilter("monFiltreDynamique")
 public class Product {
 
     @Id
@@ -23,6 +23,7 @@ public class Product {
     private int prix;
 
     //information que nous ne souhaitons pas exposer
+    @JsonIgnore
     private int prixAchat;
 
     //constructeur par défaut
