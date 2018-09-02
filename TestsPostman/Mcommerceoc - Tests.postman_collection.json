@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "2ee0efa0-a394-49d9-ab7e-e354e7542795",
+		"name": "Mcommerceoc - Tests",
+		"description": "Ensemble de test pour Mcommerceoc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/AdminProduits",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nom\": \"Poney en bois\",\n  \"prix\": -2,\n  \"prixAchat\": 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/AdminProduits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AdminProduits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/ProduitsSortByNom",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nom\": \"Poney en bois\",\n  \"prix\": 0,\n  \"prixAchat\": 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/ProduitsSortByNom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ProduitsSortByNom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/Produits/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nom\": \"Poney en bois cracheur de feu\",\n  \"prix\": 0,\n  \"prixAchat\": 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
